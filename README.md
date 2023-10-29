@@ -1,1 +1,1 @@
-`./do buildrun`
+`.\do buildrun`

@@ -31,8 +31,7 @@ BinaryTree* new_tree(int size, const char* const* keys, const char* const* value
     BinaryTree* tree = new_empty_tree();
     
     for (int i = 0; i < size; ++i) {
-        BinaryTree* sub_tree = new_root(keys[i], values[i]);
-        insert_tree(&tree, sub_tree);
+        insert_tree(&tree, new_root(keys[i], values[i]));
     }
     
     return tree;
@@ -186,6 +185,8 @@ void set_tree_value(BinaryTree* tree, const char* key, const char* value) {
     
     if (*target) {
         (*target)->value = value;
+    } else {
+        insert_tree(&tree, new_root(key, value));
     }
 }
 

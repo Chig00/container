@@ -171,6 +171,7 @@ int main() {
     print_tree_height(tree);
     
     set_tree_value(tree, "d", "1999");
+    set_tree_value(tree, "zero", "My Final Value");
     printf("\n");
     print_tree(tree);
     print_tree_size(tree);
